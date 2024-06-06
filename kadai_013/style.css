@@ -12,7 +12,6 @@ p {
   width: 100%;
 }
 
-
 /*================
 PC用のスタイル 
 =================*/
@@ -34,92 +33,107 @@ PC用のスタイル
   #nav-pc {
     text-align: right;
     font-size: 14px;
-    padding-top: 15px;
+    padding-top: 15px; 
+  }
+
+  #menu-sp {
+    display: none;
+  }
+  #nav-sp {
+    display: none;
   }
 
   /* ナビゲーションのリンクの装飾設定 */
-  #nav-pc>a {
+  #nav-pc > a {
     text-decoration: none;
     margin-left: 20px;
   }
 
-  #nav-pc>a:link {
+  #nav-pc > a:link {
     color: #0d0d0d;
   }
 
-  #nav-pc>a:visited {
+  #nav-pc > a:visited {
     color: #0d0d0d;
   }
 
-  #nav-pc>a:hover {
+  #nav-pc > a:hover {
     color: #0d0d0d;
     text-decoration: underline;
   }
 
-  #nav-pc>a:active {
+  #nav-pc > a:active {
     color: #0d0d0d;
   }
 }
 
+/*==============
+スマホ用スタイル
+==============*/
 @media screen and (max-width: 767px) {
   body {
-  min-width: 375px;
-  margin: 0;
+    min-width: 375px;
+    margin: 0;
   }
   
+  /*PCナビゲーションを非表示に*/
   #nav-pc {
-  display: none;
+    display: none;
   }
-  
+
+  /*ハンバーガーメニュー*/
   #menu-sp {
-  float: right;
-  padding: 0;
+    float: right;
+    padding: 0;
   }
-  
+
+  /*スマホ用ナビゲーション*/
   #nav-sp {
-  background-color: #ce933e;
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  display: none;
-  z-index: 100;
+    background-color: #ce933e;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    z-index: 100;
   }
-  
+
+  /*×ボタン*/
   #close {
-  position: absolute;
-  top: 20px;
-  right: 20px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
   }
-  
+
+  /*ナビゲーションメニュー用ロゴ*/
   #logo-sp {
-  margin: 80px 0 30px 20px;
+    margin: 80px 0 30px 20px;
   }
   #nav-sp > a {
-  display: block;
+    display: block;
   }
-  #nav-sp > a {
-  color: #ffffff;
+  #nav-sp > a:link {
+    color: #ffffff;
   }
-  #nav-sp > a {
-  color: #ffffff;
+  #nav-sp > a:visited {
+    color: #ffffff;
   }
-  #nav-sp > a {
-  color: #ffffff;
-  text-decoration: underline;
+  #nav-sp > a:hover {
+    color: #ffffff;
+    text-decoration: underline;
   }
-  #nav-sp > a {
-  color: #ffffff;
+  #nav-sp > a:active {
+    color: #ffffff;
   }
   #nav-sp > .menu {
-  text-decoration: none;
-  display: block;
-  margin: 0 20px 0 20px;
-  height: 44px;
-  font-size: 16px;
-  background-image: url("images/arrow.png");
-  background-repeat: no-repeat;
-  background-position: right top;
+    text-decoration: none;
+    display: block;
+    margin: 0 20px 0 20px;
+    height: 44px;
+    font-size: 16px;
+    background-image: url("images/arrow.png");
+    background-repeat: no-repeat;
+    background-position: right top;
   }
-  }
+}
