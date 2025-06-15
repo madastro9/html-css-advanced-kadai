@@ -20,7 +20,7 @@ PC用のスタイル
   body {
     max-width: 1080px;
     min-width: 960px;
-    margin: 0 auto 0 auto;
+    margin: 0 auto;
   }
 
   /* ヘッダー */
@@ -42,10 +42,7 @@ PC用のスタイル
     margin-left: 20px;
   }
 
-  #nav-pc>a:link {
-    color: #0d0d0d;
-  }
-
+  #nav-pc>a:link,
   #nav-pc>a:visited {
     color: #0d0d0d;
   }
@@ -59,90 +56,82 @@ PC用のスタイル
     color: #0d0d0d;
   }
 
-  #menu-sp {
-    display: none;
-  }
-
+  #menu-sp, 
   #nav-sp {
     display: none;
   }
 }
 
-/* スマホ用のスタイル */
-@media screen and (max-width:767px) {
+/*================
+SP用のスタイル 
+=================*/
+@media screen and (max-width: 767px) {
+  /* 横幅設定 */
+  body {
+    min-width: 375px;
+    margin: 0;
+  }
 
-body {
-min-width: 375px;
-margin: 0;
-}
+  #nav-pc {
+    display: none;
+  }
 
-#nav-pc {
-display: none;
-}
+  #menu-sp {
+    float: right;
+    padding: 0;
+    border: none;
+    background: none; 
+  }
 
-#menu-sp {
-float: right;
-padding: 0;
-}
-#nav-sp {
-background-color: #ce933e;
-position: absolute;
-left: 0;
-top: 0;
-height: 100%;
-width: 100%;
-display: none;
-z-index: 100;
-}
+  #nav-sp {
+    background-color: #ce933e;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    z-index: 100; 
+    padding: 20px; 
+  }
 
-#nav-sp ul {
-padding-left: 0;
-}
+  #close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    background: none; /* ボタンのデフォルトスタイルをリセット */
+  }
 
-#nav-sp li {
-list-style: none;
-}
+  #logo-sp {
+    display: block;
+    margin: 80px 0 30px 20px;
+  }
 
-#close {
-position: absolute;
-top: 20px;
-right: 20px;
-}
+  #nav-sp ul {
+    padding-left: 0;
+    list-style: none; 
+  }
 
-#logo-sp {
-margin: 80px 0px 30px 20px;
-}
+  #nav-sp li {
+    margin-bottom: 16px; 
+  }
 
-#nav-sp a {
-display: block;
-}
+  #nav-sp a {
+    display: block;
+    font-size: 18px;
+    color: #ffffff;
+    text-decoration: none;
+  }
 
-#nav-sp a {
-color: #ffffff;
-}
+  #nav-sp a:hover {
+    text-decoration: underline;
+  }
 
-#nav-sp a {
-color: #ffffff;
-}
-
-#nav-sp a {
-color: #ffffff;
-text-decoration: underline;
-}
-
-#nav-sp a {
-color: #ffffff;
-}
-
-#nav-sp .menu {
-text-decoration: none;
-display: block;
-margin: 0 20px;
-height: 44px;
-font-size: 16px;
-background-image: url("images/arrow.png");
-background-repeat: no-repeat;
-background-position: right top;
+  #nav-sp .menu {
+    background-image: url("images/arrow.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 30px;
   }
 }
-
